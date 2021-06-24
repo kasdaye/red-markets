@@ -1,0 +1,14 @@
+{
+    "redmarkets": {
+        "potentials": {
+            "strength": "STR",
+            "haul": "Haul",
+            "speed": "SPD",
+            "adaptability": "ADP",
+            "refresh": "Refresh",
+            "intelligence": "INT",
+            "charm": "CHA",
+            "will": "WIL"
+        }
+    }
+}

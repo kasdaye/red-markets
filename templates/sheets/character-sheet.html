@@ -1,0 +1,493 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}" />
+        </h1>
+    </header>
+
+    <body>
+        <section class="core-info">
+            <table>
+                <tr>
+                    <td>
+                        Crew
+                    </td>
+                    <td>
+                        <input name="data.crew" type="text" value="{{data.data.crew}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Weak Spot
+                    </td>
+                    <td>
+                        <input name="data.weak-spot" type="text" value="{{data.data.weak-spot}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Soft Spot
+                    </td>
+                    <td>
+                        <input name="data.soft-spot" type="text" value="{{data.data.soft-spot}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tough Spot
+                    </td>
+                    <td>
+                        <input name="data.tough-spot" type="text" value="{{data.data.tough-spot}}" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="potentials-and-skills">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Potential</h2>
+                    </td>
+                    <td>
+                        <h2>Skills</h2>
+                    </td>
+                </tr>
+                <!-- Strength -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.strength" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.potentials.strength.value" type="text"
+                                        value="{{data.data.potentials.strength.value}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.haul" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.haul.value" type="text" value="{{data.data.haul.value}}"
+                                        data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    Unarmed
+                                </td>
+                                <td>
+                                    <input name="data.skills.unarmed" type="text" value="{{data.data.skills.unarmed}}"
+                                        data-dtype="Number" />
+                                </td>
+                                <td>
+                                    <a class="skill-roll" data-action-value="{{data.data.skills.unarmed}}" data-action-name="Unarmed">
+                                        <i class="fas fa-dice"></i>
+                                    </a>>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ()
+                                </td>
+                                <td>
+                                    <input name="data.skills.unarmed-specialization" type="text"
+                                        value="{{data.data.skills.unarmed-specialization}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Melee
+                                </td>
+                                <td>
+                                    <input name="data.skills.melee" type="text" value="{{data.data.skills.melee}}"
+                                        data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ()
+                                </td>
+                                <td>
+                                    <input name="data.skills.melee-specialization1" type="text"
+                                        value="{{data.data.skills.melee-specialization1}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ()
+                                </td>
+                                <td>
+                                    <input name="data.skills.melee-specialization2" type="text"
+                                        value="{{data.data.skills.melee-specialization2}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Resistance
+                                </td>
+                                <td>
+                                    <input name="data.skills.resistance" type="text"
+                                        value="{{data.data.skills.resistance}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Speed -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.speed" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.potentials.speed.value" type="text"
+                                        value="{{data.data.potentials.speed.value}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    Shoot
+                                </td>
+                                <td>
+                                    <input name="data.skills.shoot" type="text" value="{{data.data.skills.shoot}}"
+                                        data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ()
+                                </td>
+                                <td>
+                                    <input name="data.skills.shoot-specialization1" type="text"
+                                        value="{{data.data.skills.shoot-specialization1}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ()
+                                </td>
+                                <td>
+                                    <input name="data.skills.shoot-specialization2" type="text"
+                                        value="{{data.data.skills.shoot-specialization2}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Stealth
+                                </td>
+                                <td>
+                                    <input name="data.skills.stealth" type="text" value="{{data.data.skills.stealth}}"
+                                        data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Athletics
+                                </td>
+                                <td>
+                                    <input name="data.skills.athletics" type="text"
+                                        value="{{data.data.skills.athletics}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Adaptability -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.adaptability" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.potentials.adaptability.value" type="text"
+                                        value="{{data.data.potentials.adaptability.value}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.refresh" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.refresh.value" type="text" value="{{data.data.refresh.value}}"
+                                        data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    Awareness
+                                </td>
+                                <td>
+                                    <input name="data.skills.awareness" type="text"
+                                        value="{{data.data.skills.awareness}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Self-Control
+                                </td>
+                                <td>
+                                    <input name="data.skills.self-control" type="text"
+                                        value="{{data.data.skills.self-control}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Scavenging
+                                </td>
+                                <td>
+                                    <input name="data.skills.scavenging" type="text"
+                                        value="{{data.data.skills.scavenging}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Drive
+                                </td>
+                                <td>
+                                    <input name="data.skills.drive" type="text" value="{{data.data.skills.drive}}"
+                                        data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Criminality
+                                </td>
+                                <td>
+                                    <input name="data.skills.criminality" type="text"
+                                        value="{{data.data.skills.criminality}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Intelligence -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.intelligence" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.potentials.intelligence.value" type="text"
+                                        value="{{data.data.potentials.intelligence.value}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    Foresight
+                                </td>
+                                <td>
+                                    <input name="data.skills.foresight" type="text"
+                                        value="{{data.data.skills.foresight}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Research
+                                </td>
+                                <td>
+                                    <input name="data.skills.research" type="text" value="{{data.data.skills.research}}"
+                                        data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Mechanics
+                                </td>
+                                <td>
+                                    <input name="data.skills.mechanics" type="text"
+                                        value="{{data.data.skills.mechanics}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    First Aid
+                                </td>
+                                <td>
+                                    <input name="data.skills.first-aid" type="text"
+                                        value="{{data.data.skills.first-aid}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Profession
+                                </td>
+                                <td>
+                                    <input name="data.skills.profession" type="text"
+                                        value="{{data.data.skills.profession}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ()
+                                </td>
+                                <td>
+                                    <input name="data.skills.profession-specialization1" type="text"
+                                        value="{{data.data.skills.profession-specialization1}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ()
+                                </td>
+                                <td>
+                                    <input name="data.skills.profession-specialization2" type="text"
+                                        value="{{data.data.skills.profession-specialization2}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Charm -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.charm" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.potentials.charm.value" type="text"
+                                        value="{{data.data.potentials.charm.value}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    Networking
+                                </td>
+                                <td>
+                                    <input name="data.skills.networking" type="text"
+                                        value="{{data.data.skills.networking}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Persuasion
+                                </td>
+                                <td>
+                                    <input name="data.skills.persuasion" type="text"
+                                        value="{{data.data.skills.persuasion}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Sensitivity
+                                </td>
+                                <td>
+                                    <input name="data.skills.sensitivity" type="text"
+                                        value="{{data.data.skills.sensitivity}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Deception
+                                </td>
+                                <td>
+                                    <input name="data.skills.deception" type="text"
+                                        value="{{data.data.skills.deception}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Intimidation
+                                </td>
+                                <td>
+                                    <input name="data.skills.intimidation" type="text"
+                                        value="{{data.data.skills.intimidation}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Leadership
+                                </td>
+                                <td>
+                                    <input name="data.skills.leadership" type="text"
+                                        value="{{data.data.skills.leadership}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Will -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    {{ localize "redmarkets.potentials.will" }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="data.potentials.will.value" type="text"
+                                        value="{{data.data.potentials.will.value}}" data-dtype="Number" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="items">
+            <h3>Owned Items</h3>
+            <ol class="actor-items">
+                {{#each actor.items as |item id|}}
+                <li class="actor-item" data-item-id="{{id}}">
+                    <div class="item-name">
+                        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                        <h4>{{item.name}}</h4>
+                    </div>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </section>
+    </body>
+</form>

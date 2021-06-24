@@ -1,0 +1,99 @@
+{
+    "Actor": {
+        "types": [
+            "character"
+        ],
+        "character": {
+            "templates": [],
+            "potentials": {
+                "strength": {
+                    "value": 1,
+                    "min": 1
+                },
+                "speed": {
+                    "value": 1,
+                    "min": 1
+                },
+                "adaptability": {
+                    "value": 1,
+                    "min": 1
+                },
+                "intelligence": {
+                    "value": 1,
+                    "min": 1
+                },
+                "charm": {
+                    "value": 1,
+                    "min": 1
+                },
+                "will": {
+                    "value": 1,
+                    "min": 1,
+                    "max": 1
+                }
+            },
+            "haul": {
+                "value": 1,
+                "min": 1,
+                "max": 1
+            },
+            "refresh": {
+                "value": 1,
+                "min": 1,
+                "max": 1
+            },
+            "skills": {
+                "unarmed": 0,
+                "unarmed-specialization": 0,
+                "melee": 0,
+                "melee-specialization1": 0,
+                "melee-specialization2": 0,
+                "resistance": 0,
+                "shoot": 0,
+                "shoot-specialization1": 0,
+                "shoot-specialization2": 0,
+                "stealth": 0,
+                "athletics": 0,
+                "awareness": 0,
+                "self-control": 0,
+                "scavenging": 0,
+                "drive": 0,
+                "criminality": 0,
+                "foresight": 0,
+                "research": 0,
+                "mechanics": 0,
+                "first-aid": 0,
+                "profession": 0,
+                "profession-specialization1": 0,
+                "profession-specialization2": 0,
+                "networking": 0,
+                "persuasion": 0,
+                "sensitivity": 0,
+                "deception": 0,
+                "intimidation": 0,
+                "leadership": 0
+            },
+            "crew": "",
+            "weak-spot": "",
+            "soft-spot": "",
+            "tough-spot": ""
+        }
+    },
+    "Item": {
+        "types": [
+            "gear"
+        ],
+        "gear": {
+            "templates": [],
+            "upkeep": 0,
+            "charges": {
+                "value": 0,
+                "min": 0,
+                "max": 10
+            },
+            "effect": "",
+            "qualities": "",
+            "upgrades": ""
+        }
+    }
+}

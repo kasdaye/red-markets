@@ -1,0 +1,29 @@
+{
+    "name": "red-markets",
+    "title": "Red Markets",
+    "description": "Something goes here",
+    "version": "0.1.9",
+    "author": "Max Stirner",
+    "scripts": [],
+    "esmodules": [
+        "red-markets.js"
+    ],
+    "styles": [],
+    "packs": [],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "socket": false,
+    "initiative": "1d10 + @potentials.speed.value",
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "potentials.will",
+    "secondaryTokenAttribute": null,
+    "url": "https://your/hosted/system/repo/",
+    "manifest": "https://your/hosted/system/repo/system.json",
+    "download": "https://your/packaged/download/archive.zip"
+}
