@@ -9,6 +9,12 @@
             "intelligence": "INT",
             "charm": "CHA",
             "will": "WIL"
+        },
+        "takerDetails": {
+            "crew": "Crew",
+            "weakSpot": "Weak Spot",
+            "softSpot": "Soft Spot",
+            "toughSpot": "Tough Spot"
         }
     }
 }

@@ -5,6 +5,24 @@
         ],
         "character": {
             "templates": [],
+            "takerDetails": {
+                "crew": {
+                    "value": "Foo",
+                    "keepThisFromDisappearing": "asdf"
+                },
+                "weakSpot":{
+                    "value": "Bar",
+                    "keepThisFromDisappearing": "asdf"
+                },
+                "softSpot": {
+                    "value": "Baz",
+                    "keepThisFromDisappearing": "asdf"
+                },
+                "toughSpot": {
+                    "value": "",
+                    "keepThisFromDisappearing": "asdf"
+                }
+            },
             "potentials": {
                 "strength": {
                     "value": 1,
@@ -72,11 +90,7 @@
                 "deception": 0,
                 "intimidation": 0,
                 "leadership": 0
-            },
-            "crew": "",
-            "weak-spot": "",
-            "soft-spot": "",
-            "tough-spot": ""
+            }
         }
     },
     "Item": {

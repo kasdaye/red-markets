@@ -3,12 +3,26 @@ export default class CharacterSheet extends ActorSheet {
         return `systems/red-markets/templates/sheets/character-sheet.html`;
     }
 
+    getData() {
+        const data = super.getData();
+        data.config = CONFIG.redmarkets;
+        console.log(data);
+        return data;
+    }
+
     activateListeners(html) {
         if (this.actor.isOwner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
 
         super.activateListeners(html);
+    }
+    static get defaultOptions() {
+        let options = mergeObject(super.defaultOptions, {
+            scrollY: [".outer-content"],
+            tabs: [{ navSelector: '.tabs', contentSelector: '.content', initial: 'taker' }]
+        });
+        return options;
     }
 
     _onSkillRoll(event) {
