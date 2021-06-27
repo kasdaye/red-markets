@@ -359,7 +359,7 @@
     },
     "Item": {
         "types": [
-            "gear"
+            "gear", "person"
         ],
         "gear": {
             "templates": [],
@@ -372,6 +372,12 @@
             "effect": "",
             "qualities": "",
             "upgrades": ""
+        },
+        "person": {
+            "relationship": "",
+            "isNeedy": false,
+            "isStrained": false,
+            "isSevered": false
         }
     }
 }

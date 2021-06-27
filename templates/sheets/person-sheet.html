@@ -1,0 +1,38 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    Relationship
+                </th>
+                <th>
+                    Needy
+                </th>
+                <th>
+                    Strained
+                </th>
+                <th>
+                    Severed
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="data.relationship" type="text" value="{{item.data.data.relationship}}" />
+                </td>
+                <td>
+                    <input name="data.isNeedy" type="checkbox" {{checked data.data.isNeedy}} />
+                </td>
+                <td>
+                    <input name="data.isStrained" type="checkbox" {{checked data.data.isStrained}} />
+                </td>
+                <td>
+                    <input name="data.isSevered" type="checkbox" {{checked data.data.isSevered}} />
+                </td>
+            </tr>
+        </table>
+    </div>>
+</form>
