@@ -1,12 +1,12 @@
 {
     "redmarkets": {
         "potentials": {
-            "strength": "STR",
-            "speed": "SPD",
-            "adaptability": "ADP",
-            "intelligence": "INT",
-            "charm": "CHA",
-            "will": "WIL"
+            "strength": "Strength",
+            "speed": "Speed",
+            "adaptability": "Adaptability",
+            "intelligence": "Intelligence",
+            "charm": "Charm",
+            "will": "Will"
         },
         "takerDetails": {
             "crew": "Crew",

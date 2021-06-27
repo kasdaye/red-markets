@@ -52,16 +52,16 @@
                         </td>
                         <td>
                             <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value" type="text"
-                                            value="{{skill.value}}"
-                                            data-dtype="Number" />
+                                value="{{skill.value}}" data-dtype="Number" />
                         </td>
+                        {{#if skill.isRollable}}
                         <td>
-                            <a class="skill-roll"
-                                data-action-value="{{skill.value}}"
+                            <a class="skill-roll" data-action-value="{{skill.value}}"
                                 data-action-name="{{ localize skill.translation }}">
                                 <i class="fas fa-dice"></i>
                             </a>>
                         </td>
+                        {{/if}}
                     </tr>
                     {{/each}}
                     {{/with}}
