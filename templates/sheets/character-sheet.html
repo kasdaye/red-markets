@@ -34,63 +34,38 @@
 
             <div class="tab" data-tab="skills">
                 <table>
+                    {{#each config.potentials as |potentialName potentialType|}}
+                    {{#with (lookup ../data.data.potentials potentialType) as |potential|}}
                     <tr>
                         <td>
-                            <h2>Potential</h2>
+                            <h2>{{ localize potentialName }}</h2>
                         </td>
                         <td>
-                            <h2>Skills</h2>
+                            <input name="data.potentials.{{potentialType}}.value" type="text"
+                                value="{{potential.value}}" />
                         </td>
                     </tr>
-                    <!-- Strength -->
+                    {{#each potential.skills as |skill|}}
                     <tr>
                         <td>
-                            <table>
-                                <tr>
-                                    <td>
-                                        {{ localize "redmarkets.potentials.strength" }}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input name="data.potentials.strength.value" type="text"
-                                            value="{{data.data.potentials.strength.value}}" data-dtype="Number" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Haul
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input name="data.potentials.strength.skills.haul.value" type="text"
-                                            value="{{data.data.potentials.strength.skills.haul.value}}" data-dtype="Number" />
-                                    </td>
-                                </tr>
-                            </table>
+                            {{ localize skill.translation }}
                         </td>
                         <td>
-                            <table>
-                                <tr>
-                                    <td>
-                                        Unarmed
-                                    </td>
-                                    <td>
-                                        <input name="data.potentials.strength.skills.unarmed.value" type="text"
-                                            value="{{data.data.potentials.strength.skills.unarmed.value}}" data-dtype="Number" />
-                                    </td>
-                                    <td>
-                                        <a class="skill-roll"
-                                            data-action-value="{{data.data.potentials.strength.skills.unarmed.value}}"
-                                            data-action-name="Unarmed">
-                                            <i class="fas fa-dice"></i>
-                                        </a>>
-                                    </td>
-                                </tr>
-                            </table>
+                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value" type="text"
+                                            value="{{skill.value}}"
+                                            data-dtype="Number" />
+                        </td>
+                        <td>
+                            <a class="skill-roll"
+                                data-action-value="{{skill.value}}"
+                                data-action-name="{{ localize skill.translation }}">
+                                <i class="fas fa-dice"></i>
+                            </a>>
                         </td>
                     </tr>
+                    {{/each}}
+                    {{/with}}
+                    {{/each}}
                 </table>
             </div>
 

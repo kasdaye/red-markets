@@ -13,6 +13,49 @@
             "weakSpot": "Weak Spot",
             "softSpot": "Soft Spot",
             "toughSpot": "Tough Spot"
+        },
+        "skills": {
+            "strength": {
+                "haul": "Haul",
+                "unarmed": "Unarmed",
+                "unarmedSpecialization": "Unarmed Specialization",
+                "melee": "Melee",
+                "meleeSpecialization1": "Melee Specialization 1",
+                "meleeSpecialization2": "Melee Specialization 2",
+                "resistance": "Resistance"
+            },
+            "speed": {
+                "shoot": "Shoot",
+                "shootSpecialization1": "Shoot Specialization 1",
+                "shootSpecialization2": "Shoot Specialization 2",
+                "stealth": "Stealth",
+                "athletics": "Athletics"
+            },
+            "adaptability": {
+                "refresh": "Refresh",
+                "awareness": "Awareness",
+                "selfControl": "Self-Control",
+                "scavenging": "Scavenging",
+                "drive":  "Drive",
+                "criminality": "Criminality"
+            },
+            "intelligence": {
+                "foresight": "Foresight",
+                "research": "Research",
+                "mechanics": "Mechanics",
+                "firstAid": "First Aid",
+                "profession": "Profession",
+                "professionSpecialization1": "Profession Specialization 1",
+                "professionSpecialization2": "Profession Specialization 2"
+            },
+            "charm": {
+                "networking": "Networking",
+                "persuasion": "Persuasion",
+                "sensitivity": "Sensitivity",
+                "deception": "Deception",
+                "intimidation": "Intimidation",
+                "leadership": "Leadership"
+            }
         }
     }
 }

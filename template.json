@@ -34,46 +34,67 @@
                             "min": 0,
                             "max": 1,
                             "hasMax": true,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.strength.haul",
+                            "name": "haul",
+                            "isRollable": false
                         },
                         "unarmed": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.strength.unarmed",
+                            "name": "unarmed",
+                            "isRollable": true
                         },
-                        "unarmed-specialization": {
+                        "unarmedSpecialization": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "name": ""
+                            "specializationName": "",
+                            "translation": "redmarkets.skills.strength.unarmedSpecialization",
+                            "name": "unarmedSpecialization",
+                            "isRollable": true
                         },
                         "melee": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.strength.melee",
+                            "name": "melee",
+                            "isRollable": true
                         },
-                        "melee-specialization1": {
+                        "meleeSpecialization1": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "name": ""
+                            "specializationName": "",
+                            "translation": "redmarkets.skills.strength.meleeSpecialization1",
+                            "name": "meleeSpecialization1",
+                            "isRollable": true
                         },
-                        "melee-specialization2": {
+                        "meleeSpecialization2": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "name": ""
+                            "specializationName": "",
+                            "translation": "redmarkets.skills.strength.meleeSpecialization2",
+                            "name": "meleeSpecialization2",
+                            "isRollable": true
                         },
                         "resistance": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.strength.resistance",
+                            "name": "resistance",
+                            "isRollable": true
                         }
                     }
                 },
@@ -86,33 +107,48 @@
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.speed.shoot",
+                            "name": "shoot",
+                            "isRollable": true
                         },
-                        "shoot-specialization1": {
+                        "shootSpecialization1": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "name": ""
+                            "specializationName": "",
+                            "translation": "redmarkets.skills.speed.shootSpecialization1",
+                            "name": "shootSpecialization1",
+                            "isRollable": true
                         },
-                        "shoot-specialization2": {
+                        "shootSpecialization2": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "name": ""
+                            "specializationName": "",
+                            "translation": "redmarkets.skills.speed.shootSpecialization2",
+                            "name": "shootSpecialization2",
+                            "isRollable": true
                         },
                         "stealth": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.speed.stealth",
+                            "name": "stealth",
+                            "isRollable": true
                         },
                         "athletics": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.speed.athletics",
+                            "name": "athletics",
+                            "isRollable": true
                         }
                     }
                 },
@@ -126,37 +162,55 @@
                             "min": 0,
                             "max": 1,
                             "hasMax": true,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.adaptability.refresh",
+                            "name": "refresh",
+                            "isRollable": false
                         },
                         "awareness": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.adaptability.awareness",
+                            "name": "awareness",
+                            "isRollable": true
                         },
-                        "self-control": {
+                        "selfControl": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.adaptability.selfControl",
+                            "name": "selfControl",
+                            "isRollable": true
                         },
                         "scavenging": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.adaptability.scavenging",
+                            "name": "scavenging",
+                            "isRollable": true
                         },
                         "drive": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.adaptability.drive",
+                            "name": "drive",
+                            "isRollable": true
                         },
                         "criminality": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.adaptability.criminality",
+                            "name": "criminality",
+                            "isRollable": true
                         }
                     }
                 },
@@ -169,45 +223,66 @@
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.intelligence.foresight",
+                            "name": "foresight",
+                            "isRollable": true
                         },
                         "research": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.intelligence.research",
+                            "name": "research",
+                            "isRollable": true
                         },
                         "mechanics": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.intelligence.mechanics",
+                            "name": "mechanics",
+                            "isRollable": true
                         },
-                        "first-aid": {
+                        "firstAid": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.intelligence.firstAid",
+                            "name": "firstAid",
+                            "isRollable": true
                         },
                         "profession": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.intelligence.profession",
+                            "name": "profession",
+                            "isRollable": true
                         },
-                        "profession-specialization1": {
+                        "professionSpecialization1": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "name": ""
+                            "specializationName": "",
+                            "translation": "redmarkets.skills.intelligence.professionSpecialization1",
+                            "name": "professionSpecialization1",
+                            "isRollable": true
                         },
-                        "profession-specialization2": {
+                        "professionSpecialization2": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "name": ""
+                            "specializationName": "",
+                            "translation": "redmarkets.skills.intelligence.professionSpecialization2",
+                            "name": "professionSpecialization2",
+                            "isRollable": true
                         }
                     }
                 },
@@ -220,37 +295,55 @@
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.charm.networking",
+                            "name": "networking",
+                            "isRollable": true
                         },
                         "persuasion": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.charm.persuasion",
+                            "name": "persuasion",
+                            "isRollable": true
                         },
                         "sensitivity": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.charm.sensitivity",
+                            "name": "sensitivity",
+                            "isRollable": true
                         },
                         "deception": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.charm.deception",
+                            "name": "deception",
+                            "isRollable": true
                         },
                         "intimidation": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.charm.intimidation",
+                            "name": "intimidation",
+                            "isRollable": true
                         },
                         "leadership": {
                             "value": 0,
                             "min": 0,
                             "hasMax": false,
-                            "isSpecialization": false
+                            "isSpecialization": false,
+                            "translation": "redmarkets.skills.charm.leadership",
+                            "name": "leadership",
+                            "isRollable": true
                         }
                     }
                 },
