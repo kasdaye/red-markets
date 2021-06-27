@@ -10,7 +10,7 @@
                     "value": "Foo",
                     "keepThisFromDisappearing": "asdf"
                 },
-                "weakSpot":{
+                "weakSpot": {
                     "value": "Bar",
                     "keepThisFromDisappearing": "asdf"
                 },
@@ -26,70 +26,241 @@
             "potentials": {
                 "strength": {
                     "value": 1,
-                    "min": 1
+                    "min": 1,
+                    "hasMax": false,
+                    "skills": {
+                        "haul": {
+                            "value": 0,
+                            "min": 0,
+                            "max": 1,
+                            "hasMax": true,
+                            "isSpecialization": false
+                        },
+                        "unarmed": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "unarmed-specialization": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": true,
+                            "name": ""
+                        },
+                        "melee": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "melee-specialization1": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": true,
+                            "name": ""
+                        },
+                        "melee-specialization2": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": true,
+                            "name": ""
+                        },
+                        "resistance": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        }
+                    }
                 },
                 "speed": {
                     "value": 1,
-                    "min": 1
+                    "min": 1,
+                    "hasMax": false,
+                    "skills": {
+                        "shoot": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "shoot-specialization1": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": true,
+                            "name": ""
+                        },
+                        "shoot-specialization2": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": true,
+                            "name": ""
+                        },
+                        "stealth": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "athletics": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        }
+                    }
                 },
                 "adaptability": {
                     "value": 1,
-                    "min": 1
+                    "min": 1,
+                    "hasMax": false,
+                    "skills": {
+                        "refresh": {
+                            "value": 1,
+                            "min": 0,
+                            "max": 1,
+                            "hasMax": true,
+                            "isSpecialization": false
+                        },
+                        "awareness": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "self-control": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "scavenging": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "drive": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "criminality": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        }
+                    }
                 },
                 "intelligence": {
                     "value": 1,
-                    "min": 1
+                    "min": 1,
+                    "hasMax": false,
+                    "skills": {
+                        "foresight": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "research": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "mechanics": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "first-aid": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "profession": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "profession-specialization1": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": true,
+                            "name": ""
+                        },
+                        "profession-specialization2": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": true,
+                            "name": ""
+                        }
+                    }
                 },
                 "charm": {
                     "value": 1,
-                    "min": 1
+                    "min": 1,
+                    "hasMax": false,
+                    "skills": {
+                        "networking": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "persuasion": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "sensitivity": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "deception": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "intimidation": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        },
+                        "leadership": {
+                            "value": 0,
+                            "min": 0,
+                            "hasMax": false,
+                            "isSpecialization": false
+                        }
+                    }
                 },
                 "will": {
                     "value": 1,
                     "min": 1,
-                    "max": 1
+                    "max": 1,
+                    "hasMax": true,
+                    "skills": {}
                 }
-            },
-            "haul": {
-                "value": 1,
-                "min": 1,
-                "max": 1
-            },
-            "refresh": {
-                "value": 1,
-                "min": 1,
-                "max": 1
-            },
-            "skills": {
-                "unarmed": 0,
-                "unarmed-specialization": 0,
-                "melee": 0,
-                "melee-specialization1": 0,
-                "melee-specialization2": 0,
-                "resistance": 0,
-                "shoot": 0,
-                "shoot-specialization1": 0,
-                "shoot-specialization2": 0,
-                "stealth": 0,
-                "athletics": 0,
-                "awareness": 0,
-                "self-control": 0,
-                "scavenging": 0,
-                "drive": 0,
-                "criminality": 0,
-                "foresight": 0,
-                "research": 0,
-                "mechanics": 0,
-                "first-aid": 0,
-                "profession": 0,
-                "profession-specialization1": 0,
-                "profession-specialization2": 0,
-                "networking": 0,
-                "persuasion": 0,
-                "sensitivity": 0,
-                "deception": 0,
-                "intimidation": 0,
-                "leadership": 0
             }
         }
     },
