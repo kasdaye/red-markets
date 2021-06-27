@@ -40,7 +40,7 @@
                         <td>
                             <h2>{{ localize potentialName }}</h2>
                         </td>
-                        <td>
+                        <td colspan="3">
                             <input name="data.potentials.{{potentialType}}.value" type="text"
                                 value="{{potential.value}}" />
                         </td>
@@ -50,10 +50,19 @@
                         <td>
                             {{ localize skill.translation }}
                         </td>
-                        <td>
+                        <td colspan="{{#if skill.isRollable}}3{{else}}1{{/if}}">
                             <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value" type="text"
                                 value="{{skill.value}}" data-dtype="Number" />
                         </td>
+                        {{#if skill.hasMax}}
+                        <td>
+                            /
+                        </td>
+                        <td>
+                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.max" type="text"
+                                value="{{skill.max}}" data-dtype="Number" />
+                        </td>
+                        {{/if}}
                         {{#if skill.isRollable}}
                         <td>
                             <a class="skill-roll" data-action-value="{{skill.value}}"
