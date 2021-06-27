@@ -47,9 +47,16 @@
                     </tr>
                     {{#each potential.skills as |skill|}}
                     <tr>
+                        {{#if skill.isSpecialization}}
+                        <td>
+                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.specializationName" type="text"
+                                value="{{skill.specializationName}}" />
+                        </td>
+                        {{else}}
                         <td>
                             {{ localize skill.translation }}
                         </td>
+                        {{/if}}
                         <td colspan="{{#if skill.isRollable}}3{{else}}1{{/if}}">
                             <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value" type="text"
                                 value="{{skill.value}}" data-dtype="Number" />
@@ -66,7 +73,7 @@
                         {{#if skill.isRollable}}
                         <td>
                             <a class="skill-roll" data-action-value="{{skill.value}}"
-                                data-action-name="{{ localize skill.translation }}">
+                                data-action-name="{{#if skill.isSpecialization}}{{skill.specializationName}}{{else}}{{ localize skill.translation }}{{/if}}">
                                 <i class="fas fa-dice"></i>
                             </a>>
                         </td>

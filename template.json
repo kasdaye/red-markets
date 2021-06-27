@@ -53,7 +53,7 @@
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "specializationName": "",
+                            "specializationName": "Unarmed Specialization",
                             "translation": "redmarkets.skills.strength.unarmedSpecialization",
                             "name": "unarmedSpecialization",
                             "isRollable": true
@@ -72,7 +72,7 @@
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "specializationName": "",
+                            "specializationName": "Melee Specialization",
                             "translation": "redmarkets.skills.strength.meleeSpecialization1",
                             "name": "meleeSpecialization1",
                             "isRollable": true
@@ -82,7 +82,7 @@
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "specializationName": "",
+                            "specializationName": "Melee Specialization",
                             "translation": "redmarkets.skills.strength.meleeSpecialization2",
                             "name": "meleeSpecialization2",
                             "isRollable": true
@@ -117,7 +117,7 @@
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "specializationName": "",
+                            "specializationName": "Shoot Specialization",
                             "translation": "redmarkets.skills.speed.shootSpecialization1",
                             "name": "shootSpecialization1",
                             "isRollable": true
@@ -127,7 +127,7 @@
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "specializationName": "",
+                            "specializationName": "Shoot Specialization",
                             "translation": "redmarkets.skills.speed.shootSpecialization2",
                             "name": "shootSpecialization2",
                             "isRollable": true
@@ -269,7 +269,7 @@
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "specializationName": "",
+                            "specializationName": "Profession Specialization",
                             "translation": "redmarkets.skills.intelligence.professionSpecialization1",
                             "name": "professionSpecialization1",
                             "isRollable": true
@@ -279,7 +279,7 @@
                             "min": 0,
                             "hasMax": false,
                             "isSpecialization": true,
-                            "specializationName": "",
+                            "specializationName": "Profession Specialization",
                             "translation": "redmarkets.skills.intelligence.professionSpecialization2",
                             "name": "professionSpecialization2",
                             "isRollable": true
