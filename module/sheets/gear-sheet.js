@@ -1,6 +1,6 @@
 export default class GearSheet extends ItemSheet {
     get template() {
-        return `systems/red-markets/templates/sheets/gear-sheet.html`;
+        return `systems/red-markets/templates/sheets/gear-sheet.hbs`;
     }
 
     getData() {
