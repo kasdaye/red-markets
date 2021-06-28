@@ -159,12 +159,11 @@
             </div>
 
             <div class="tab" data-tab="gear">
-                <h3>Owned Items</h3>
+                <h3>Gear</h3>
                 <ol class="actor-items">
                     {{#each actor.items as |item id|}}
-                    <li class="actor-item" data-item-id="{{id}}">
+                    <li class="actor-item" data-item-id="{{item.id}}">
                         <div class="item-name">
-                            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
                             <h4>{{item.name}}</h4>
                         </div>
                         <div class="item-controls">
