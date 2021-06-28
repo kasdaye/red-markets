@@ -14,4 +14,19 @@ Hooks.once("init", function () {
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("red-markets", CharacterSheet, { makeDefault: true });
+
+    preloadHandlebarsTemplates()
+
+    Handlebars.registerHelper('ifeq', function (a, b, options) {
+        if (a == b) { return options.fn(this); }
+        return options.inverse(this);
+    });
 });
+
+async function preloadHandlebarsTemplates() {
+    const templatePaths = [
+        "systems/red-markets/templates/sheets/gear-sheet.hbs"
+    ];
+
+    return loadTemplates(templatePaths);
+}

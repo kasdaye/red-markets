@@ -6,7 +6,6 @@ export default class PersonSheet extends ItemSheet {
     getData() {
         const data = super.getData();
         data.config = CONFIG.redmarkets;
-        console.log(data);
         return data;
     }
 }
