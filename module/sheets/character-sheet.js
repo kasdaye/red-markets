@@ -13,6 +13,7 @@ export default class CharacterSheet extends ActorSheet {
         if (this.actor.isOwner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
             html.find(".item-edit").click(this._onItemEdit.bind(this));
+            html.find(".item-delete").click(this._onItemDelete.bind(this));
         }
 
         super.activateListeners(html);
@@ -78,5 +79,13 @@ export default class CharacterSheet extends ActorSheet {
         let itemId = element.closest(".actor-item").dataset.itemId;
         let item = this.actor.items.get(itemId);
         item.sheet.render(true);
+    }
+
+    _onItemDelete(event) {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".actor-item").dataset.itemId;
+        let item = this.actor.items.get(itemId);
+        item.delete();
     }
 }
