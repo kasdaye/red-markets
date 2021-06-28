@@ -15,3 +15,18 @@ redmarkets.potentials = {
     charm: "redmarkets.potentials.charm",
     will: "redmarkets.potentials.will"
 };
+
+redmarkets.threats = {
+    detachment: "redmarkets.threats.detachment",
+    stress: "redmarkets.threats.stress",
+    trauma: "redmarkets.threats.trauma"
+};
+
+redmarkets.damage = {
+    rightLeg: "redmarkets.damage.rightLeg",
+    leftLeg: "redmarkets.damage.leftLeg",
+    rightArm: "redmarkets.damage.rightArm",
+    leftArm: "redmarkets.damage.leftArm",
+    torso: "redmarkets.damage.torso",
+    head: "redmarkets.damage.head"
+}

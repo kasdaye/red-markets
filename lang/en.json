@@ -56,6 +56,19 @@
                 "intimidation": "Intimidation",
                 "leadership": "Leadership"
             }
+        },
+        "threats": {
+            "detachment": "Detachment",
+            "stress": "Stress",
+            "trauma": "Trauma"
+        },
+        "damage": {
+            "rightLeg": "Right Leg",
+            "leftLeg": "Left Leg",
+            "rightArm": "Right Arm",
+            "leftArm": "Left Arm",
+            "torso": "Torso",
+            "head": "Head"
         }
     }
 }

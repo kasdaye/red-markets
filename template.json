@@ -354,12 +354,74 @@
                     "hasMax": true,
                     "skills": {}
                 }
+            },
+            "threats": {
+                "detachment": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 15,
+                    "translation": "redmarkets.threats.detachment",
+                    "name": "detachment"
+                },
+                "stress": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 15,
+                    "translation": "redmarkets.threats.stress",
+                    "name": "stress"
+                },
+                "trauma": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 15,
+                    "translation": "redmarkets.threats.trauma",
+                    "name": "trauma"
+                }
+            },
+            "damage": {
+                "rightLeg": {
+                    "hitLocations": "1-2",
+                    "stunDamage": 0,
+                    "killDamage": 0,
+                    "maxHealthBoxes": 10
+                },
+                "leftLeg": {
+                    "hitLocations": "3-4",
+                    "stunDamage": 0,
+                    "killDamage": 0,
+                    "maxHealthBoxes": 10
+                },
+                "rightArm": {
+                    "hitLocations": "5",
+                    "stunDamage": 0,
+                    "killDamage": 0,
+                    "maxHealthBoxes": 10
+                },
+                "leftArm": {
+                    "hitLocations": "6",
+                    "stunDamage": 0,
+                    "killDamage": 0,
+                    "maxHealthBoxes": 10
+                },
+                "torso": {
+                    "hitLocations": "7-9",
+                    "stunDamage": 0,
+                    "killDamage": 0,
+                    "maxHealthBoxes": 20
+                },
+                "head": {
+                    "hitLocations": "10",
+                    "stunDamage": 0,
+                    "killDamage": 0,
+                    "maxHealthBoxes": 10
+                }
             }
         }
     },
     "Item": {
         "types": [
-            "gear", "person"
+            "gear",
+            "person"
         ],
         "gear": {
             "templates": [],

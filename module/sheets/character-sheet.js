@@ -17,6 +17,7 @@ export default class CharacterSheet extends ActorSheet {
 
         super.activateListeners(html);
     }
+
     static get defaultOptions() {
         let options = mergeObject(super.defaultOptions, {
             scrollY: [".outer-content"],

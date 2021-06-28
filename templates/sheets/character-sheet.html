@@ -11,6 +11,8 @@
         <nav class="tabs">
             <a class="item active" data-tab="takerDetails">Taker</a>
             <a class="item" data-tab="skills">Skills</a>
+            <a class="item" data-tab="threats">Threats</a>
+            <a class="item" data-tab="damage">Damage</a>
             <a class="item" data-tab="gear">Gear</a>
         </nav>
 
@@ -49,8 +51,8 @@
                     <tr>
                         {{#if skill.isSpecialization}}
                         <td>
-                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.specializationName" type="text"
-                                value="{{skill.specializationName}}" />
+                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.specializationName"
+                                type="text" value="{{skill.specializationName}}" />
                         </td>
                         {{else}}
                         <td>
@@ -80,6 +82,77 @@
                         {{/if}}
                     </tr>
                     {{/each}}
+                    {{/with}}
+                    {{/each}}
+                </table>
+            </div>
+
+            <div class="tab" data-tab="threats">
+                <table>
+                    {{#each config.threats as |threatName threatType|}}
+                    {{#with (lookup ../data.data.threats threatType) as |threat|}}
+                    <tr>
+                        <th>
+                            {{ localize threatName }}
+                        </th>
+                        <td>
+                            <input name="data.threats.{{threatType}}.value" type="text" value="{{threat.value}}"
+                                data-dtype="Number" />
+                        </td>
+                        <td>
+                            /
+                        </td>
+                        <td>
+                            <input name="data.threats.{{threatType}}.max" type="text" value="{{threat.max}}"
+                                data-dtype="Number" />
+                        </td>
+                    </tr>
+                    {{/with}}
+                    {{/each}}
+                </table>
+            </div>
+
+            <div class="tab" data-tab="damage">
+                <table>
+                    <tr>
+                        <th>
+                            Hit Location
+                        </th>
+                        <th>
+                            Die
+                        </th>
+                        <th>
+                            Stun
+                        </th>
+                        <th>
+                            Kill
+                        </th>
+                        <th>
+                            Max
+                        </th>
+                    </tr>
+                    {{#each config.damage as |damageName damageType|}}
+                    {{#with (lookup ../data.data.damage damageType) as |hitLocation|}}
+                    <tr>
+                        <td>
+                            {{ localize damageName }}
+                        </td>
+                        <td>
+                            {{hitLocation.hitLocations}}
+                        </td>
+                        <td>
+                            <input name="data.damage.{{damageType}}.stunDamage" type="text" value="{{hitLocation.stunDamage}}"
+                                data-dtype="Number" />
+                        </td>
+                        <td>
+                            <input name="data.damage.{{damageType}}.killDamage" type="text" value="{{hitLocation.killDamage}}"
+                                data-dtype="Number" />
+                        </td>
+                        <td>
+                            <input name="data.damage.{{damageType}}.maxHealthBoxes" type="text" value="{{hitLocation.maxHealthBoxes}}"
+                                data-dtype="Number" />
+                        </td>
+                    </tr>
                     {{/with}}
                     {{/each}}
                 </table>
