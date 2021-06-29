@@ -1,5 +1,6 @@
 import { redmarkets } from "./module/config.js";
 import CharacterSheet from "./module/sheets/character-sheet.js";
+import NegotiationSheet from "./module/sheets/negotiation-sheet.js";
 import GearSheet from "./module/sheets/gear-sheet.js";
 import PersonSheet from "./module/sheets/person-sheet.js";
 
@@ -14,6 +15,7 @@ Hooks.once("init", function () {
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("red-markets", CharacterSheet, { makeDefault: true });
+    Actors.registerSheet("red-markets", NegotiationSheet, { makeDefault: false });
 
     preloadHandlebarsTemplates()
 

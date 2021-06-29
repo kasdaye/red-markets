@@ -2,13 +2,15 @@
     "name": "red-markets",
     "title": "Red Markets",
     "description": "Something goes here",
-    "version": "0.1.28",
+    "version": "0.1.29",
     "author": "Max Stirner",
     "scripts": [],
     "esmodules": [
         "red-markets.js"
     ],
-    "styles": [],
+    "styles": [
+        "red-markets.css"
+    ],
     "packs": [],
     "languages": [
         {

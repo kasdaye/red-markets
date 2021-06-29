@@ -1,7 +1,8 @@
 {
     "Actor": {
         "types": [
-            "character"
+            "character",
+            "negotiation"
         ],
         "character": {
             "templates": [],
@@ -416,6 +417,10 @@
                     "maxHealthBoxes": 10
                 }
             }
+        },
+        "negotiation": {
+            "clientValue": 7,
+            "providerValue": 2
         }
     },
     "Item": {

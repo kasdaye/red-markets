@@ -1,0 +1,75 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}" />
+        </h1>
+    </header>
+
+    <body>
+        <table>
+            <tr>
+                <td colspan="7">
+                    <div class="slider-container">
+                        <input type="range" min="1" max="7" value="7" class="slider" id="clientRange">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="negotiation-track">
+                    <h2>As A Favor</h2>
+                </td>
+                <td class="negotiation-track">
+                    <h2>Buyer's Market</h2>
+                </td>
+                <td class="negotiation-track">
+                    <h2>At Value</h2>
+                </td>
+                <td class="negotiation-track">
+                    <h2>Labour</h2>
+                </td>
+                <td class="negotiation-track">
+                    <h2>Hazard Pay</h2>
+                </td>
+                <td class="negotiation-track">
+                    <h2>100% Mark-Up</h2>
+                </td>
+                <td class="negotiation-track">
+                    <h2>Expenses</h2>
+                </td>
+            </tr>
+            <tr>
+                <td class="negotiation-track">
+                    <p>Contract is offered at the Demand price only AND client earns a - Rep spot to use in future
+                        negotiations</p>
+                </td>
+                <td class="negotiation-track">
+                    <p>Contract is offered at the Demand price only (Black result on a equilibrium roll</p>
+                </td>
+                <td class="negotiation-track">
+                    <p>Contract is offered at the value of Supply + Demand (Black + Red)</p>
+                </td>
+                <td class="negotiation-track">
+                    <p>Client agrees to add the crew's break point to the price (Black + Red + break point)</p>
+                </td>
+                <td class="negotiation-track">
+                    <p>Add one Bounty per Taker per Leg to Hazard Pay. (Ex: a crew of four on a three-Leg run earns 4 x
+                        3 more)</p>
+                </td>
+                <td class="negotiation-track">
+                    <p>Double the cost of the job before Labor</p>
+                </td>
+                <td class="negotiation-track">
+                    <p>The equipment upkeep of every participating Taker is added into the price (no one pays upkeep
+                        this session)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <div class="slider-container">
+                        <input type="range" min="1" max="7" value="2" class="slider" id="providerRange">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</form>
