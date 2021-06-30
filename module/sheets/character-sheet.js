@@ -65,8 +65,8 @@ export default class CharacterSheet extends ActorSheet {
                     let success = roll.total > 0;
                     roll.toMessage({
                         flavor: success ? "Success on " + actionName + "!" : "Failure on " + actionName + "!",
-                        user: game.user.data._id,
-                        speaker: ChatMessage.getSpeaker()
+                        user: game.user.id,
+                        speaker: {actor: this.object.data._id, alias: this.object.data.name}
                     });
                 }
             }
