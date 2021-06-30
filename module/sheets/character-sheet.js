@@ -73,7 +73,6 @@ export default class CharacterSheet extends ActorSheet {
     }
 
     createRollFlavourString(actionName, roll) {
-        console.log(roll);
         let naturalBlackDieResult = roll.dice[0].results[0].result;
         let naturalRedDieResult = roll.dice[1].results[0].result;
         let actionStatus = "";
