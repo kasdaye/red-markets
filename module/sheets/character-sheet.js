@@ -62,15 +62,33 @@ export default class CharacterSheet extends ActorSheet {
                         chargeModifier: parseInt(html.find('[name=modifier-value]')[0].value)
                     };
                     var roll = new Roll(rollFormula, rollData).roll();
-                    let success = roll.total > 0;
                     roll.toMessage({
-                        flavor: success ? "Success on " + actionName + "!" : "Failure on " + actionName + "!",
+                        flavor: this.createRollFlavourString(actionName, roll),
                         user: game.user.id,
-                        speaker: {actor: this.object.data._id, alias: this.object.data.name}
+                        speaker: { actor: this.object.data._id, alias: this.object.data.name }
                     });
                 }
             }
         }).render(true);
+    }
+
+    createRollFlavourString(actionName, roll) {
+        console.log(roll);
+        let naturalBlackDieResult = roll.dice[0].results[0].result;
+        let naturalRedDieResult = roll.dice[1].results[0].result;
+        let actionStatus = "";
+        if (naturalBlackDieResult == naturalRedDieResult) {
+            if (naturalRedDieResult % 2 == 0) {
+                actionStatus = "Critical Success";
+            } else {
+                actionStatus = "Critical Failure";
+            }
+        } else {
+            let success = roll.total > 0;
+            actionStatus = success ? "Success" : "Failure";
+        }
+        let rollFlavour = actionStatus + " on " + actionName + "!";
+        return rollFlavour;
     }
 
     _onItemEdit(event) {
