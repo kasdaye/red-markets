@@ -42,10 +42,24 @@
                         <td>
                             <h2>{{ localize potentialName }}</h2>
                         </td>
+                        {{#if potential.hasMax}}
+                        <td>
+                            <input name="data.potentials.{{potentialType}}.value" type="text"
+                                value="{{potential.value}}" />
+                        </td>
+                        <td>
+                            /
+                        </td>
+                        <td>
+                            <input name="data.potentials.{{potentialType}}.max" type="text"
+                                value="{{potential.max}}" />
+                        </td>
+                        {{else}}
                         <td colspan="3">
                             <input name="data.potentials.{{potentialType}}.value" type="text"
                                 value="{{potential.value}}" />
                         </td>
+                        {{/if}}
                     </tr>
                     {{#each potential.skills as |skill|}}
                     <tr>
