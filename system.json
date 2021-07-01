@@ -25,7 +25,7 @@
     "gridUnits": "ft",
     "primaryTokenAttribute": "potentials.will",
     "secondaryTokenAttribute": null,
-    "url": "https://your/hosted/system/repo/",
-    "manifest": "https://your/hosted/system/repo/system.json",
+    "url": "https://github.com/kasdaye/red-markets/",
+    "manifest": "https://github.com/kasdaye/red-markets/system.json",
     "download": "https://your/packaged/download/archive.zip"
 }
