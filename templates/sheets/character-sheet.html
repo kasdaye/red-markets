@@ -79,19 +79,19 @@
                                 {{#if skill.hasMax}}
                                 <td>
                                     <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value"
-                                        type="text" value="{{skill.value}}" data-dtype="Number" class="skill-partial" />
+                                        type="text" value="{{skill.value}}" class="skill-partial" data-dtype="Number" />
                                 </td>
                                 <td>
                                     /
                                 </td>
                                 <td colspan="2">
                                     <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.max"
-                                        type="text" value="{{skill.max}}" data-dtype="Number" class="skill-partial" />
+                                        type="text" value="{{skill.max}}" class="skill-partial" data-dtype="Number" />
                                 </td>
                                 {{else}}
                                 <td colspan="{{#if skill.isRollable}}3{{else}}1{{/if}}">
                                     <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value"
-                                        type="text" value="{{skill.value}}" data-dtype="Number" class="skill-full" />
+                                        type="text" value="{{skill.value}}" class="skill-full" data-dtype="Number" />
                                 </td>
                                 {{/if}}
                                 {{#if skill.isRollable}}
@@ -183,6 +183,8 @@
             </div>
 
             <div class="tab" data-tab="gear">
+                <h3>Bounty</h3> <input name="data.bounty.value" type="text" value="{{data.data.bounty.value}}" class="skill-full"
+                    data-dtype="Number" />
                 <h3>Gear</h3>
                 <ol>
                     {{#each actor.items as |item id|}}

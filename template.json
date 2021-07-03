@@ -416,6 +416,10 @@
                     "killDamage": 0,
                     "maxHealthBoxes": 10
                 }
+            },
+            "bounty": {
+                "value": 0,
+                "min": 0
             }
         },
         "negotiation": {
