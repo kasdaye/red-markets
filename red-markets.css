@@ -39,3 +39,22 @@
     background: #000000;
     cursor: pointer;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+input.skill-partial {
+    width: 1em;
+}
+
+input.skill-full {
+    width: 2em;
+}
+
+table.potential-container {
+    border: 2px solid black;
+}

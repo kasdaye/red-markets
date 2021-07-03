@@ -35,70 +35,80 @@
             </div>
 
             <div class="tab" data-tab="skills">
-                <table>
+                <div class="flex-container">
                     {{#each config.potentials as |potentialName potentialType|}}
                     {{#with (lookup ../data.data.potentials potentialType) as |potential|}}
-                    <tr>
-                        <td>
-                            <h2>{{ localize potentialName }}</h2>
-                        </td>
-                        {{#if potential.hasMax}}
-                        <td>
-                            <input name="data.potentials.{{potentialType}}.value" type="text"
-                                value="{{potential.value}}" />
-                        </td>
-                        <td>
-                            /
-                        </td>
-                        <td>
-                            <input name="data.potentials.{{potentialType}}.max" type="text"
-                                value="{{potential.max}}" />
-                        </td>
-                        {{else}}
-                        <td colspan="3">
-                            <input name="data.potentials.{{potentialType}}.value" type="text"
-                                value="{{potential.value}}" />
-                        </td>
-                        {{/if}}
-                    </tr>
-                    {{#each potential.skills as |skill|}}
-                    <tr>
-                        {{#if skill.isSpecialization}}
-                        <td>
-                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.specializationName"
-                                type="text" value="{{skill.specializationName}}" />
-                        </td>
-                        {{else}}
-                        <td>
-                            {{ localize skill.translation }}
-                        </td>
-                        {{/if}}
-                        <td colspan="{{#if skill.isRollable}}3{{else}}1{{/if}}">
-                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value" type="text"
-                                value="{{skill.value}}" data-dtype="Number" />
-                        </td>
-                        {{#if skill.hasMax}}
-                        <td>
-                            /
-                        </td>
-                        <td>
-                            <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.max" type="text"
-                                value="{{skill.max}}" data-dtype="Number" />
-                        </td>
-                        {{/if}}
-                        {{#if skill.isRollable}}
-                        <td>
-                            <a class="skill-roll" data-action-value="{{skill.value}}"
-                                data-action-name="{{#if skill.isSpecialization}}{{skill.specializationName}}{{else}}{{ localize skill.translation }}{{/if}}">
-                                <i class="fas fa-dice"></i>
-                            </a>>
-                        </td>
-                        {{/if}}
-                    </tr>
-                    {{/each}}
+                    <div class="flex-item">
+                        <table class="potential-container">
+                            <tr>
+                                <td>
+                                    <h2>{{ localize potentialName }}</h2>
+                                </td>
+                                {{#if potential.hasMax}}
+                                <td>
+                                    <input name="data.potentials.{{potentialType}}.value" type="text"
+                                        value="{{potential.value}}" class="skill-partial" data-dtype="Number" />
+                                </td>
+                                <td>
+                                    /
+                                </td>
+                                <td colspan="2">
+                                    <input name="data.potentials.{{potentialType}}.max" type="text"
+                                        value="{{potential.max}}" class="skill-partial" data-dtype="Number" />
+                                </td>
+                                {{else}}
+                                <td colspan="4">
+                                    <input name="data.potentials.{{potentialType}}.value" type="text"
+                                        value="{{potential.value}}" class="skill-full" data-dtype="Number" />
+                                </td>
+                                {{/if}}
+                            </tr>
+                            {{#each potential.skills as |skill|}}
+                            <tr>
+                                {{#if skill.isSpecialization}}
+                                <td>
+                                    <input
+                                        name="data.potentials.{{potentialType}}.skills.{{skill.name}}.specializationName"
+                                        type="text" value="{{skill.specializationName}}" />
+                                </td>
+                                {{else}}
+                                <td>
+                                    {{ localize skill.translation }}
+                                </td>
+                                {{/if}}
+                                {{#if skill.hasMax}}
+                                <td>
+                                    <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value"
+                                        type="text" value="{{skill.value}}" data-dtype="Number" class="skill-partial" />
+                                </td>
+                                <td>
+                                    /
+                                </td>
+                                <td colspan="2">
+                                    <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.max"
+                                        type="text" value="{{skill.max}}" data-dtype="Number" class="skill-partial" />
+                                </td>
+                                {{else}}
+                                <td colspan="{{#if skill.isRollable}}3{{else}}1{{/if}}">
+                                    <input name="data.potentials.{{potentialType}}.skills.{{skill.name}}.value"
+                                        type="text" value="{{skill.value}}" data-dtype="Number" class="skill-full" />
+                                </td>
+                                {{/if}}
+                                {{#if skill.isRollable}}
+                                <td>
+                                    <a class="skill-roll" data-action-value="{{skill.value}}"
+                                        data-action-name="{{#if skill.isSpecialization}}{{skill.specializationName}}{{else}}{{ localize skill.translation }}{{/if}}">
+                                        <i class="fas fa-dice"></i>
+                                    </a>>
+                                </td>
+                                {{/if}}
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </div>
                     {{/with}}
                     {{/each}}
-                </table>
+                </div>
             </div>
 
             <div class="tab" data-tab="threats">
@@ -155,16 +165,16 @@
                             {{hitLocation.hitLocations}}
                         </td>
                         <td>
-                            <input name="data.damage.{{damageType}}.stunDamage" type="text" value="{{hitLocation.stunDamage}}"
-                                data-dtype="Number" />
+                            <input name="data.damage.{{damageType}}.stunDamage" type="text"
+                                value="{{hitLocation.stunDamage}}" data-dtype="Number" />
                         </td>
                         <td>
-                            <input name="data.damage.{{damageType}}.killDamage" type="text" value="{{hitLocation.killDamage}}"
-                                data-dtype="Number" />
+                            <input name="data.damage.{{damageType}}.killDamage" type="text"
+                                value="{{hitLocation.killDamage}}" data-dtype="Number" />
                         </td>
                         <td>
-                            <input name="data.damage.{{damageType}}.maxHealthBoxes" type="text" value="{{hitLocation.maxHealthBoxes}}"
-                                data-dtype="Number" />
+                            <input name="data.damage.{{damageType}}.maxHealthBoxes" type="text"
+                                value="{{hitLocation.maxHealthBoxes}}" data-dtype="Number" />
                         </td>
                     </tr>
                     {{/with}}
