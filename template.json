@@ -9,6 +9,12 @@
         "templates": {
             "hasHealthBoxes": {
                 "damage": {
+                    "general": {
+                        "hitLocations": "1-10",
+                        "stunDamage": 0,
+                        "killDamage": 0,
+                        "maxHealthBoxes": 10
+                    },
                     "rightLeg": {
                         "hitLocations": "1-2",
                         "stunDamage": 0,

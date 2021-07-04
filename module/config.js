@@ -23,6 +23,7 @@ redmarkets.threats = {
 };
 
 redmarkets.damage = {
+    general: "redmarkets.damage.general",
     rightLeg: "redmarkets.damage.rightLeg",
     leftLeg: "redmarkets.damage.leftLeg",
     rightArm: "redmarkets.damage.rightArm",
