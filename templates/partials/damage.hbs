@@ -1,0 +1,45 @@
+<section>
+    <table>
+        <tr>
+            <th>
+                {{ localize "redmarkets.damage.hitLocation" }}
+            </th>
+            <th>
+                {{ localize "redmarkets.damage.die" }}
+            </th>
+            <th>
+                {{ localize "redmarkets.damage.stun" }}
+            </th>
+            <th>
+                {{ localize "redmarkets.damage.kill" }}
+            </th>
+            <th>
+                {{ localize "redmarkets.damage.max" }}
+            </th>
+        </tr>
+        {{#each hitLocations as |damageName damageType|}}
+        {{#with (lookup ../actor.data.data.damage damageType) as |hitLocation|}}
+        <tr>
+            <td>
+                {{ localize damageName }}
+            </td>
+            <td>
+                {{hitLocation.hitLocations}}
+            </td>
+            <td>
+                <input name="data.damage.{{damageType}}.stunDamage" type="text" value="{{hitLocation.stunDamage}}"
+                    data-dtype="Number" />
+            </td>
+            <td>
+                <input name="data.damage.{{damageType}}.killDamage" type="text" value="{{hitLocation.killDamage}}"
+                    data-dtype="Number" />
+            </td>
+            <td>
+                <input name="data.damage.{{damageType}}.maxHealthBoxes" type="text"
+                    value="{{hitLocation.maxHealthBoxes}}" data-dtype="Number" />
+            </td>
+        </tr>
+        {{/with}}
+        {{/each}}
+    </table>
+</section>

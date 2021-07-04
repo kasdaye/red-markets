@@ -26,49 +26,7 @@
             </a>
         </div>
         <div class="flex-item">
-            <table>
-                <tr>
-                    <th>
-                        {{ localize "redmarkets.damage.hitLocation" }}
-                    </th>
-                    <th>
-                        {{ localize "redmarkets.damage.die" }}
-                    </th>
-                    <th>
-                        {{ localize "redmarkets.damage.stun" }}
-                    </th>
-                    <th>
-                        {{ localize "redmarkets.damage.kill" }}
-                    </th>
-                    <th>
-                        {{ localize "redmarkets.damage.max" }}
-                    </th>
-                </tr>
-                {{#each config.damage as |damageName damageType|}}
-                {{#with (lookup ../data.data.damage damageType) as |hitLocation|}}
-                <tr>
-                    <td>
-                        {{ localize damageName }}
-                    </td>
-                    <td>
-                        {{hitLocation.hitLocations}}
-                    </td>
-                    <td>
-                        <input class="skill-full" name="data.damage.{{damageType}}.stunDamage" type="text"
-                            value="{{hitLocation.stunDamage}}" data-dtype="Number" />
-                    </td>
-                    <td>
-                        <input class="skill-full" name="data.damage.{{damageType}}.killDamage" type="text"
-                            value="{{hitLocation.killDamage}}" data-dtype="Number" />
-                    </td>
-                    <td>
-                        <input class="skill-full" name="data.damage.{{damageType}}.maxHealthBoxes" type="text"
-                            value="{{hitLocation.maxHealthBoxes}}" data-dtype="Number" />
-                    </td>
-                </tr>
-                {{/with}}
-                {{/each}}
-            </table>
+            {{> "systems/red-markets/templates/partials/damage.hbs" actor=actor hitLocations=config.damage}}
         </div>
     </div>
 </form>

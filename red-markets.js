@@ -40,7 +40,8 @@ Hooks.once("init", function () {
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/red-markets/templates/sheets/gear-sheet.hbs",
-        "systems/red-markets/templates/partials/haul-sheet.hbs"
+        "systems/red-markets/templates/partials/haul-sheet.hbs",
+        "systems/red-markets/templates/partials/damage.hbs"
     ];
 
     return loadTemplates(templatePaths);
