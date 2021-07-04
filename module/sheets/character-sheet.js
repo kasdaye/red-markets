@@ -14,6 +14,9 @@ export default class CharacterSheet extends ActorSheet {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
             html.find(".item-edit").click(this._onItemEdit.bind(this));
             html.find(".item-delete").click(this._onItemDelete.bind(this));
+
+            html.find(".add-haul").click(this._onAddHaul.bind(this));
+            html.find(".inline-edit").change(this._onInlineEdit.bind(this));
         }
 
         super.activateListeners(html);
@@ -104,5 +107,28 @@ export default class CharacterSheet extends ActorSheet {
         let itemId = element.closest(".actor-item").dataset.itemId;
         let item = this.actor.items.get(itemId);
         item.delete();
+    }
+
+    _onAddHaul(event){
+        event.preventDefault();
+        let element = event.currentTarget;
+
+        let itemData = {
+            name: element.dataset.defaultName,
+            type: element.dataset.type
+        }
+
+        return this.actor.createEmbeddedDocuments("Item", [itemData]);
+    }
+
+    _onInlineEdit(event){
+        let element = event.currentTarget;
+        let itemId = element.closest(".actor-item").dataset.itemId;
+        let item = this.actor.items.get(itemId);
+        let field = element.dataset.field;
+
+        console.log(element);
+    
+        return item.update({ [field]: element.value });
     }
 }

@@ -1,0 +1,26 @@
+<section>
+    <a class="add-haul" data-type="haul" data-default-name="{{ localize "redmarkets.haul.haul" }}" title="{{ localize "redmarkets.haul.addHaul" }}">
+        <i class="fas fa-plus"></i> {{ localize "redmarkets.haul.addHaul" }}
+    </a>
+    <table>
+        {{#each items as |item id|}}
+        {{#ifeq item.type "haul"}}
+        <tr class="actor-item" data-item-id="{{item.id}}">
+            <td>
+                <input class="inline-edit" data-field="name" type="text"
+                    value="{{name}}" />
+            </td>
+            <td>
+                <input class="skill-partial inline-edit" data-field="data.amount" type="text"
+                    value="{{data.data.amount}}" data-dtype="Number" />
+            </td>
+            <td>
+                <a class="item-delete" title="{{ localize "redmarkets.haul.removeHaul" }}">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        {{/ifeq}}
+        {{/each}}
+    </table>
+</section>

@@ -36,7 +36,7 @@
                 "awareness": "Awareness",
                 "selfControl": "Self-Control",
                 "scavenging": "Scavenging",
-                "drive":  "Drive",
+                "drive": "Drive",
                 "criminality": "Criminality"
             },
             "intelligence": {
@@ -69,6 +69,12 @@
             "leftArm": "Left Arm",
             "torso": "Torso",
             "head": "Head"
+        },
+        "haul": {
+            "haul": "Haul",
+            "addHaul": "Add Haul",
+            "removeHaul": "Remove Haul",
+            "size": "Haul Size"
         }
     }
 }

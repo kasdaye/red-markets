@@ -3,6 +3,7 @@ import CharacterSheet from "./module/sheets/character-sheet.js";
 import NegotiationSheet from "./module/sheets/negotiation-sheet.js";
 import GearSheet from "./module/sheets/gear-sheet.js";
 import PersonSheet from "./module/sheets/person-sheet.js";
+import HaulSheet from "./module/sheets/haul-sheet.js";
 
 Hooks.once("init", function () {
     console.log("red-markets | Initializing Red Markets System");
@@ -12,6 +13,7 @@ Hooks.once("init", function () {
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("red-markets", GearSheet, { makeDefault: true });
     Items.registerSheet("red-markets", PersonSheet, { makeDefault: false });
+    Items.registerSheet("red-markets", HaulSheet, { makeDefault: false });
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("red-markets", CharacterSheet, { makeDefault: true });
@@ -27,7 +29,8 @@ Hooks.once("init", function () {
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
-        "systems/red-markets/templates/sheets/gear-sheet.hbs"
+        "systems/red-markets/templates/sheets/gear-sheet.hbs",
+        "systems/red-markets/templates/partials/haul-sheet.hbs"
     ];
 
     return loadTemplates(templatePaths);

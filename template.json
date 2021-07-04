@@ -430,7 +430,8 @@
     "Item": {
         "types": [
             "gear",
-            "person"
+            "person",
+            "haul"
         ],
         "gear": {
             "templates": [],
@@ -449,6 +450,9 @@
             "isNeedy": false,
             "isStrained": false,
             "isSevered": false
+        },
+        "haul": {
+            "amount": 0
         }
     }
 }

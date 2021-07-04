@@ -14,6 +14,7 @@
             <a class="item" data-tab="threats">Threats</a>
             <a class="item" data-tab="damage">Damage</a>
             <a class="item" data-tab="gear">Gear</a>
+            <a class="item" data-tab="haul">Haul</a>
         </nav>
 
         <div class="content">
@@ -183,8 +184,8 @@
             </div>
 
             <div class="tab" data-tab="gear">
-                <h3>Bounty</h3> <input name="data.bounty.value" type="text" value="{{data.data.bounty.value}}" class="skill-full"
-                    data-dtype="Number" />
+                <h3>Bounty</h3> <input name="data.bounty.value" type="text" value="{{data.data.bounty.value}}"
+                    class="skill-full" data-dtype="Number" />
                 <h3>Gear</h3>
                 <ol>
                     {{#each actor.items as |item id|}}
@@ -215,6 +216,9 @@
                 </ol>
             </div>
 
+            <div class="tab" data-tab="haul">
+                {{> "systems/red-markets/templates/partials/haul-sheet.hbs" actor}}
+            </div>
         </div>
     </div>
 </form>
