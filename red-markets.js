@@ -3,6 +3,7 @@ import { redmarkets } from "./module/config.js";
 import CharacterSheet from "./module/sheets/character-sheet.js";
 import NegotiationSheet from "./module/sheets/negotiation-sheet.js";
 import CasualtiesSheet from "./module/sheets/casualties-sheet.js";
+import VectorSheet from "./module/sheets/vector-sheet.js";
 
 import GearSheet from "./module/sheets/gear-sheet.js";
 import PersonSheet from "./module/sheets/person-sheet.js";
@@ -19,13 +20,14 @@ Hooks.once("init", function () {
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("red-markets", GearSheet, { types: ["gear"], makeDefault: true });
-    Items.registerSheet("red-markets", PersonSheet, { types: ["person"], makeDefault: false });
-    Items.registerSheet("red-markets", HaulSheet, { types: ["haul"], makeDefault: false });
+    Items.registerSheet("red-markets", PersonSheet, { types: ["person"], makeDefault: true });
+    Items.registerSheet("red-markets", HaulSheet, { types: ["haul"], makeDefault: true });
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("red-markets", CharacterSheet, { types: ["character"], makeDefault: true });
-    Actors.registerSheet("red-markets", NegotiationSheet, { types: ["negotiation"], makeDefault: false });
-    Actors.registerSheet("red-markets", CasualtiesSheet, { types: ["casualties"], makeDefault: false });
+    Actors.registerSheet("red-markets", NegotiationSheet, { types: ["negotiation"], makeDefault: true });
+    Actors.registerSheet("red-markets", CasualtiesSheet, { types: ["casualties"], makeDefault: true });
+    Actors.registerSheet("red-markets", VectorSheet, { types: ["vector"], makeDefault: true });
 
     preloadHandlebarsTemplates()
 

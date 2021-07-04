@@ -63,6 +63,11 @@
             "trauma": "Trauma"
         },
         "damage": {
+            "hitLocation": "Hit Location",
+            "die": "Die",
+            "stun": "Stun",
+            "kill": "Kill",
+            "max": "Max",
             "rightLeg": "Right Leg",
             "leftLeg": "Left Leg",
             "rightArm": "Right Arm",
@@ -83,6 +88,9 @@
             "mass": "Mass",
             "shamble": "Shamble",
             "generate": "Generate Casualties"
+        },
+        "vector": {
+            "murderModifier": "Murder Modifier"
         }
     }
 }

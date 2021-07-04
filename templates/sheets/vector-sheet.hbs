@@ -1,0 +1,74 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}" />
+        </h1>
+    </header>
+
+    <div class="flex-casualties">
+        <div class="flex-item">
+            <table>
+                <tr>
+                    <td>
+                        {{ localize "redmarkets.vector.murderModifier" }}
+                    </td>
+                    <td>
+                        <input class="skill-partial" name="data.murderModifier" type="text"
+                            value="{{data.data.murderModifier}}" data-dtype="Number" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="flex-item">
+            <a class="initiative-roll">
+                {{ localize "redmarkets.initiative.roll" }} <i class="fas fa-dice"></i>
+            </a>
+        </div>
+        <div class="flex-item">
+            <table>
+                <tr>
+                    <th>
+                        {{ localize "redmarkets.damage.hitLocation" }}
+                    </th>
+                    <th>
+                        {{ localize "redmarkets.damage.die" }}
+                    </th>
+                    <th>
+                        {{ localize "redmarkets.damage.stun" }}
+                    </th>
+                    <th>
+                        {{ localize "redmarkets.damage.kill" }}
+                    </th>
+                    <th>
+                        {{ localize "redmarkets.damage.max" }}
+                    </th>
+                </tr>
+                {{#each config.damage as |damageName damageType|}}
+                {{#with (lookup ../data.data.damage damageType) as |hitLocation|}}
+                <tr>
+                    <td>
+                        {{ localize damageName }}
+                    </td>
+                    <td>
+                        {{hitLocation.hitLocations}}
+                    </td>
+                    <td>
+                        <input class="skill-full" name="data.damage.{{damageType}}.stunDamage" type="text"
+                            value="{{hitLocation.stunDamage}}" data-dtype="Number" />
+                    </td>
+                    <td>
+                        <input class="skill-full" name="data.damage.{{damageType}}.killDamage" type="text"
+                            value="{{hitLocation.killDamage}}" data-dtype="Number" />
+                    </td>
+                    <td>
+                        <input class="skill-full" name="data.damage.{{damageType}}.maxHealthBoxes" type="text"
+                            value="{{hitLocation.maxHealthBoxes}}" data-dtype="Number" />
+                    </td>
+                </tr>
+                {{/with}}
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</form>
