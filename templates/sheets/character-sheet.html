@@ -11,7 +11,7 @@
         <nav class="tabs">
             <a class="item active" data-tab="takerDetails">Taker</a>
             <a class="item" data-tab="skills">Skills</a>
-            <a class="item" data-tab="threats">Threats</a>
+            <a class="item" data-tab="combat">Combat</a>
             <a class="item" data-tab="damage">Damage</a>
             <a class="item" data-tab="gear">Gear</a>
             <a class="item" data-tab="haul">Haul</a>
@@ -112,7 +112,12 @@
                 </div>
             </div>
 
-            <div class="tab" data-tab="threats">
+            <div class="tab" data-tab="combat">
+                <h3>Initiative</h3>
+                <a class="initiative-roll">
+                    {{ localize "redmarkets.initiative.roll" }} <i class="fas fa-dice"></i>
+                </a>
+                <h3>Threats</h3>
                 <table>
                     {{#each config.threats as |threatName threatType|}}
                     {{#with (lookup ../data.data.threats threatType) as |threat|}}

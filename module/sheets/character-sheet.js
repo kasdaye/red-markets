@@ -17,6 +17,7 @@ export default class CharacterSheet extends ActorSheet {
 
             html.find(".add-haul").click(this._onAddHaul.bind(this));
             html.find(".inline-edit").change(this._onInlineEdit.bind(this));
+            html.find(".initiative-roll").click(this._onInitiativeRoll.bind(this));
         }
 
         super.activateListeners(html);
@@ -109,7 +110,7 @@ export default class CharacterSheet extends ActorSheet {
         item.delete();
     }
 
-    _onAddHaul(event){
+    _onAddHaul(event) {
         event.preventDefault();
         let element = event.currentTarget;
 
@@ -121,14 +122,18 @@ export default class CharacterSheet extends ActorSheet {
         return this.actor.createEmbeddedDocuments("Item", [itemData]);
     }
 
-    _onInlineEdit(event){
+    _onInlineEdit(event) {
         let element = event.currentTarget;
         let itemId = element.closest(".actor-item").dataset.itemId;
         let item = this.actor.items.get(itemId);
         let field = element.dataset.field;
 
         console.log(element);
-    
+
         return item.update({ [field]: element.value });
+    }
+
+    _onInitiativeRoll(event) {
+        this.actor.rollInitiative({createCombatants: true});
     }
 }
