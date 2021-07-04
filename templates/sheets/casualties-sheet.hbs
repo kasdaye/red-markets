@@ -1,0 +1,45 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}" />
+        </h1>
+    </header>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    {{ localize "redmarkets.casualties.mass" }}
+                </td>
+                <td>
+                    <input class="skill-full" name="data.mass.value" type="text" value="{{data.data.mass.value}}"
+                        data-dtype="Number" />
+                </td>
+                <td>
+                    /
+                </td>
+                <td>
+                    <input class="skill-full" name="data.mass.max" type="text" value="{{data.data.mass.max}}"
+                        data-dtype="Number" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ localize "redmarkets.casualties.shamble" }}
+                </td>
+                <td>
+                    <input class="skill-full" name="data.shamble.value" type="text" value="{{data.data.shamble.value}}"
+                        data-dtype="Number" />
+                </td>
+                <td>
+                    /
+                </td>
+                <td>
+                    <input class="skill-full" name="data.shamble.max" type="text" value="{{data.data.shamble.max}}"
+                        data-dtype="Number" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

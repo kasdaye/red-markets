@@ -78,6 +78,10 @@
         },
         "initiative": {
             "roll": "Roll Initiative"
+        },
+        "casualties": {
+            "mass": "Mass",
+            "shamble": "Shamble"
         }
     }
 }

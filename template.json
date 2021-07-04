@@ -2,7 +2,8 @@
     "Actor": {
         "types": [
             "character",
-            "negotiation"
+            "negotiation",
+            "casualties"
         ],
         "character": {
             "templates": [],
@@ -425,6 +426,16 @@
         "negotiation": {
             "clientValue": 7,
             "providerValue": 2
+        },
+        "casualties": {
+            "mass": {
+                "value": 1,
+                "max": 1
+            },
+            "shamble": {
+                "value": 1,
+                "max": 1
+            }
         }
     },
     "Item": {
