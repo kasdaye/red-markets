@@ -81,7 +81,8 @@
         },
         "casualties": {
             "mass": "Mass",
-            "shamble": "Shamble"
+            "shamble": "Shamble",
+            "generate": "Generate Casualties"
         }
     }
 }

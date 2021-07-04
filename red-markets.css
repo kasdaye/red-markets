@@ -40,8 +40,17 @@
     cursor: pointer;
 }
 
-.flex-container {
+.flex-potentials {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.flex-casualties {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: stretch;

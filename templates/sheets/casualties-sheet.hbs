@@ -6,40 +6,52 @@
         </h1>
     </header>
 
-    <div>
-        <table>
-            <tr>
-                <td>
-                    {{ localize "redmarkets.casualties.mass" }}
-                </td>
-                <td>
-                    <input class="skill-full" name="data.mass.value" type="text" value="{{data.data.mass.value}}"
-                        data-dtype="Number" />
-                </td>
-                <td>
-                    /
-                </td>
-                <td>
-                    <input class="skill-full" name="data.mass.max" type="text" value="{{data.data.mass.max}}"
-                        data-dtype="Number" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {{ localize "redmarkets.casualties.shamble" }}
-                </td>
-                <td>
-                    <input class="skill-full" name="data.shamble.value" type="text" value="{{data.data.shamble.value}}"
-                        data-dtype="Number" />
-                </td>
-                <td>
-                    /
-                </td>
-                <td>
-                    <input class="skill-full" name="data.shamble.max" type="text" value="{{data.data.shamble.max}}"
-                        data-dtype="Number" />
-                </td>
-            </tr>
-        </table>
+    <div class="flex-casualties">
+        <div class="flex-item">
+            <a class="generate-casualties">
+                {{ localize "redmarkets.casualties.generate" }} <i class="fas fa-dice"></i>
+            </a>
+        </div>
+        <div class="flex-item">
+            <a class="initiative-roll">
+                {{ localize "redmarkets.initiative.roll" }} <i class="fas fa-dice"></i>
+            </a>
+        </div>
+        <div class="flex-item">
+            <table class="potential-container">
+                <tr>
+                    <td>
+                        {{ localize "redmarkets.casualties.mass" }}
+                    </td>
+                    <td>
+                        <input class="skill-full" name="data.mass.value" type="text" value="{{data.data.mass.value}}"
+                            data-dtype="Number" />
+                    </td>
+                    <td>
+                        /
+                    </td>
+                    <td>
+                        <input class="skill-full" name="data.mass.max" type="text" value="{{data.data.mass.max}}"
+                            data-dtype="Number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ localize "redmarkets.casualties.shamble" }}
+                    </td>
+                    <td>
+                        <input class="skill-full" name="data.shamble.value" type="text"
+                            value="{{data.data.shamble.value}}" data-dtype="Number" />
+                    </td>
+                    <td>
+                        /
+                    </td>
+                    <td>
+                        <input class="skill-full" name="data.shamble.max" type="text" value="{{data.data.shamble.max}}"
+                            data-dtype="Number" />
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </form>

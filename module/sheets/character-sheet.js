@@ -128,8 +128,6 @@ export default class CharacterSheet extends ActorSheet {
         let item = this.actor.items.get(itemId);
         let field = element.dataset.field;
 
-        console.log(element);
-
         return item.update({ [field]: element.value });
     }
 
