@@ -16,13 +16,13 @@ Hooks.once("init", function () {
     Combatant.prototype._getInitiativeFormula = _getInitiativeFormula;
 
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("red-markets", GearSheet, { makeDefault: true });
-    Items.registerSheet("red-markets", PersonSheet, { makeDefault: false });
-    Items.registerSheet("red-markets", HaulSheet, { makeDefault: false });
+    Items.registerSheet("red-markets", GearSheet, { types: ["gear"], makeDefault: true });
+    Items.registerSheet("red-markets", PersonSheet, { types: ["person"], makeDefault: false });
+    Items.registerSheet("red-markets", HaulSheet, { types: ["haul"], makeDefault: false });
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("red-markets", CharacterSheet, { makeDefault: true });
-    Actors.registerSheet("red-markets", NegotiationSheet, { makeDefault: false });
+    Actors.registerSheet("red-markets", CharacterSheet, { types: ["character"], makeDefault: true });
+    Actors.registerSheet("red-markets", NegotiationSheet, { types: ["negotiation"], makeDefault: false });
 
     preloadHandlebarsTemplates()
 
