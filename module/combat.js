@@ -14,6 +14,8 @@ export const _getInitiativeFormula = function () {
         let initiativeBonus = actor.data.data.murderModifier;
         parts.push("1d10");
         parts.push(initiativeBonus);
+    } else if (actor.type == "marketForce") {
+        parts.push("1d10");
     }
 
     return parts.filter(p => p !== null).join(" + ");

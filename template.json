@@ -4,7 +4,8 @@
             "character",
             "negotiation",
             "casualties",
-            "vector"
+            "vector",
+            "marketForce"
         ],
         "templates": {
             "hasHealthBoxes": {
@@ -455,6 +456,12 @@
                 "hasHealthBoxes"
             ],
             "murderModifier": 1
+        },
+        "marketForce": {
+            "templates": [
+                "hasHealthBoxes"
+            ],
+            "type": "partTime"
         }
     },
     "Item": {

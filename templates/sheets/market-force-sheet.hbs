@@ -1,0 +1,36 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}" />
+        </h1>
+    </header>
+
+    <div class="flex-casualties">
+        <div class="flex-item">
+            <a class="initiative-roll">
+                {{ localize "redmarkets.initiative.roll" }} <i class="fas fa-dice"></i>
+            </a>
+        </div>
+        <div class="flex-item">
+            <select name="data.type">
+                {{#select data.data.type}}
+                {{#each config.marketForceTypes as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </div>
+        <div class="flex-item">
+            {{#ifeq data.data.type "partTime"}}
+            {{> "systems/red-markets/templates/partials/damage.hbs" actor=actor hitLocations=config.damage.general}}
+            {{/ifeq}}
+            {{#ifeq data.data.type "fullTime"}}
+            {{> "systems/red-markets/templates/partials/damage.hbs" actor=actor hitLocations=config.damage.full}}
+            {{/ifeq}}
+            {{#ifeq data.data.type "management"}}
+            {{> "systems/red-markets/templates/partials/damage.hbs" actor=actor hitLocations=config.damage.full}}
+            {{/ifeq}}
+        </div>
+    </div>
+</form>

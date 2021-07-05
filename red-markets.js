@@ -4,6 +4,7 @@ import CharacterSheet from "./module/sheets/character-sheet.js";
 import NegotiationSheet from "./module/sheets/negotiation-sheet.js";
 import CasualtiesSheet from "./module/sheets/casualties-sheet.js";
 import VectorSheet from "./module/sheets/vector-sheet.js";
+import MarketForceSheet from "./module/sheets/market-force-sheet.js";
 
 import GearSheet from "./module/sheets/gear-sheet.js";
 import PersonSheet from "./module/sheets/person-sheet.js";
@@ -28,6 +29,7 @@ Hooks.once("init", function () {
     Actors.registerSheet("red-markets", NegotiationSheet, { types: ["negotiation"], makeDefault: true });
     Actors.registerSheet("red-markets", CasualtiesSheet, { types: ["casualties"], makeDefault: true });
     Actors.registerSheet("red-markets", VectorSheet, { types: ["vector"], makeDefault: true });
+    Actors.registerSheet("red-markets", MarketForceSheet, { types: ["marketForce"], makeDefault: true });
 
     preloadHandlebarsTemplates()
 

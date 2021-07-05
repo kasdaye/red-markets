@@ -92,6 +92,11 @@
         },
         "vector": {
             "murderModifier": "Murder Modifier"
+        },
+        "marketForceTypes": {
+            "partTime": "Part Time",
+            "fullTime": "Full Time",
+            "management": "Management"
         }
     }
 }

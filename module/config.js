@@ -44,3 +44,9 @@ redmarkets.damage.full = {
     torso: "redmarkets.damage.torso",
     head: "redmarkets.damage.head"
 }
+
+redmarkets.marketForceTypes = {
+    partTime: "redmarkets.marketForceTypes.partTime",
+    fullTime: "redmarkets.marketForceTypes.fullTime",
+    management: "redmarkets.marketForceTypes.management"
+}
