@@ -31,3 +31,16 @@ redmarkets.damage = {
     torso: "redmarkets.damage.torso",
     head: "redmarkets.damage.head"
 }
+
+redmarkets.damage.general = {
+    general: "redmarkets.damage.general"
+}
+
+redmarkets.damage.full = {
+    rightLeg: "redmarkets.damage.rightLeg",
+    leftLeg: "redmarkets.damage.leftLeg",
+    rightArm: "redmarkets.damage.rightArm",
+    leftArm: "redmarkets.damage.leftArm",
+    torso: "redmarkets.damage.torso",
+    head: "redmarkets.damage.head"
+}
