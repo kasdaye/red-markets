@@ -493,8 +493,8 @@
             "amount": 0
         },
         "marketForceGear": {
-            "skillUsed": "melee",
-            "damageType": "stun"
+            "skillUsed": "Skill used",
+            "damageType": "Damage or Details"
         }
     }
 }

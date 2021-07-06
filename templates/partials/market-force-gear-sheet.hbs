@@ -1,0 +1,30 @@
+<section>
+    <a class="add-market-force-gear" data-type="marketForceGear" data-default-name="{{ localize "redmarkets.marketForceGear.gear" }}" title="{{ localize "redmarkets.marketForceGear.addGear" }}">
+        <i class="fas fa-plus"></i> {{ localize "redmarkets.marketForceGear.addGear" }}
+    </a>
+    <table>
+        {{#each items as |item id|}}
+        {{#ifeq item.type "marketForceGear"}}
+        <tr class="actor-item" data-item-id="{{item.id}}">
+            <td>
+                <input class="inline-edit" data-field="name" type="text"
+                    value="{{name}}" />
+            </td>
+            <td>
+                <input class="inline-edit" data-field="data.skillUsed" type="text"
+                    value="{{data.data.skillUsed}}" />
+            </td>
+            <td>
+                <input class="inline-edit" data-field="data.damageType" type="text"
+                    value="{{data.data.damageType}}" />
+            </td>
+            <td>
+                <a class="item-delete" title="{{ localize "redmarkets.marketForceGear.removeGear" }}">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        {{/ifeq}}
+        {{/each}}
+    </table>
+</section>

@@ -46,7 +46,8 @@ async function preloadHandlebarsTemplates() {
         "systems/red-markets/templates/sheets/gear-sheet.hbs",
         "systems/red-markets/templates/sheets/market-force-gear-sheet.hbs",
         "systems/red-markets/templates/partials/haul-sheet.hbs",
-        "systems/red-markets/templates/partials/damage.hbs"
+        "systems/red-markets/templates/partials/damage.hbs",
+        "systems/red-markets/templates/partials/market-force-gear-sheet.hbs"
     ];
 
     return loadTemplates(templatePaths);

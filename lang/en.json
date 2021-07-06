@@ -97,6 +97,17 @@
             "partTime": "Part Time",
             "fullTime": "Full Time",
             "management": "Management"
+        },
+        "marketForceGear": {
+            "skillUsed": {
+                "skillUsed": "Skill Used"
+            },
+            "damageType": {
+                "damageType": "Damage Type"
+            },
+            "gear": "Gear",
+            "addGear": "Add Gear",
+            "removeGear": "Remove Gear"
         }
     }
 }
