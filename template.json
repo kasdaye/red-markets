@@ -468,7 +468,8 @@
         "types": [
             "gear",
             "person",
-            "haul"
+            "haul",
+            "marketForceGear"
         ],
         "gear": {
             "templates": [],
@@ -490,6 +491,10 @@
         },
         "haul": {
             "amount": 0
+        },
+        "marketForceGear": {
+            "skillUsed": "melee",
+            "damageType": "stun"
         }
     }
 }

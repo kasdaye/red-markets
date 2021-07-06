@@ -9,6 +9,7 @@ import MarketForceSheet from "./module/sheets/market-force-sheet.js";
 import GearSheet from "./module/sheets/gear-sheet.js";
 import PersonSheet from "./module/sheets/person-sheet.js";
 import HaulSheet from "./module/sheets/haul-sheet.js";
+import MarketForceGearSheet from "./module/sheets/market-force-gear-sheet.js";
 
 import { _getInitiativeFormula } from "./module/combat.js";
 
@@ -23,6 +24,7 @@ Hooks.once("init", function () {
     Items.registerSheet("red-markets", GearSheet, { types: ["gear"], makeDefault: true });
     Items.registerSheet("red-markets", PersonSheet, { types: ["person"], makeDefault: true });
     Items.registerSheet("red-markets", HaulSheet, { types: ["haul"], makeDefault: true });
+    Items.registerSheet("red-markets", MarketForceGearSheet, { types: ["marketForceGear"], makeDefault: true });
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("red-markets", CharacterSheet, { types: ["character"], makeDefault: true });
@@ -42,6 +44,7 @@ Hooks.once("init", function () {
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/red-markets/templates/sheets/gear-sheet.hbs",
+        "systems/red-markets/templates/sheets/market-force-gear-sheet.hbs",
         "systems/red-markets/templates/partials/haul-sheet.hbs",
         "systems/red-markets/templates/partials/damage.hbs"
     ];
